@@ -1,0 +1,44 @@
+.banner {
+  float: left;
+  padding-bottom: 10px;
+  height: 400px;
+  width: 100%;
+  border: 0 none;
+  opacity: 0.8;
+}
+
+.container1 {
+  border: black;
+  padding: 50px;
+  float: left;
+  width: 250px;
+  height: 180px;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 90px;
+  text-align: center;
+  text-decoration: none;
+}
+.container2 {
+  border: black;
+  padding: 50px;
+  width: 550px;
+  height: 180px;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 90px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  float: left;
+}
+
+.work {
+  float: left;
+  width: 150px;
+  height: 150px;
+  border: 0 none;
+  opacity: 0.8;
+}
