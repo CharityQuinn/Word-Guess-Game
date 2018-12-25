@@ -1,17 +1,18 @@
 .banner {
   float: left;
   padding-bottom: 10px;
-  height: 400px;
+  height: 300px;
   width: 100%;
   border: 0 none;
   opacity: 0.8;
 }
 
+
 .container1 {
   border: black;
   padding: 50px;
   float: left;
-  width: 250px;
+  width: 33%;
   height: 180px;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 30px;
@@ -20,6 +21,11 @@
   text-align: center;
   text-decoration: none;
 }
+.row {
+  width: 250px;
+  height: 20px;
+  
+} 
 .container2 {
   border: black;
   padding: 50px;
@@ -36,6 +42,7 @@
 }
 
 .work {
+ 
   float: left;
   width: 150px;
   height: 150px;
