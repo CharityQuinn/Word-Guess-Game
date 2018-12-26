@@ -1,5 +1,5 @@
 var plants = ["Jade", "Air Plant", "Christmas Cactus", "Spider"];
-var wins;
+var wins = 0;
 var remainingLetters;
 var wordSpell = [];
 var userGuess;
@@ -87,12 +87,15 @@ function checkLetter() {
 
 
 initializeGame();
-
-$(document).ready(function(){ 
-  console.log("Did we register a keyboad click? " + event);
+$(function(){
+  $(document).on('keyup', function(){
+      console.log('keyup');
+      console.log("Did we register a keyboad click? " + event);
   userGuess = String.fromCharCode(event).toLowerCase();
   checkLetter();
-})
+  });
+});
+
 
 
 
