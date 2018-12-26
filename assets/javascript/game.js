@@ -1,4 +1,4 @@
-var plants = ["Jade", "Air Plant", "Christmas Cactus", "Spider"];
+var plants = ["jade", "air plant", "christmas cactus", "spider"];
 var wins = 0;
 var remainingLetters;
 var wordSpell = [];
@@ -10,10 +10,11 @@ var randomWord = "";
 
 function initializeGame() {
 
-  numGuesses = 6;
+  numGuesses = 9;
   // Assign picked word to a variable
   randomWord = plants[Math.floor(Math.random() * plants.length)];
   wordSpell = randomWord.split("");
+  console.log(wordSpell)
   numDash = randomWord.length;
   console.log(" This is the randomWord " + randomWord);
   goodLtrDashes = [];
@@ -38,19 +39,17 @@ function checkLtrs(letter) {
   var letterInWord = false;
   for (var i = 0; i < numDash; i++) {
     if (randomWord[i] === letter) {
-
       letterInWord = true;
     }
   }
 
   if (letterInWord) {
     for (var j = 0; j < numDash; j++) {
-
       if (randomWord[j] === letter) {
-        goodLtrDashes[j] = letter;
+       dashes[j] = letter;
       }
     }
-    console.log(goodLtrDashes);
+    console.log(dashes);
   } 
   else {
     wrongLtr.push(letter);
@@ -59,6 +58,8 @@ function checkLtrs(letter) {
   }
 
 }
+
+
 
 // check the user's word function
 function checkLetter() {
@@ -73,8 +74,7 @@ function checkLetter() {
     alert("You win!");
 
     initializeGame();
-  } 
-  else if (numGuesses === 0) {
+  } else if (numGuesses === 0) {
     lossCounter++;
     alert("You lose");
     // Restart the game
@@ -87,20 +87,27 @@ function checkLetter() {
 
 
 initializeGame();
-$(function(){
-  $(document).on('keyup', function(){
-      console.log('keyup');
+
+$(".imgcrys").click(function () {
+         
+      document.on('keyup', evaluateInput);
+      
       console.log("Did we register a keyboad click? " + event);
-  userGuess = String.fromCharCode(event).toLowerCase();
-  checkLetter();
-  });
-});
+      userGuess = String.fromCharCode(event).toLowerCase();
+      checkLetter();
+})
+      // $(document).on('keyup', function () {
+      //   console.log([object KeyboardEvent]);
+      //   console.log("Did we register a keyboad click? " + event);
+      //   userGuess = String.fromCharCode(event).toLowerCase();
+      //   checkLetter();
+      // });
 
 
 
 
-function reset() {
-  wins = 0;
-  randomWord = "";
-  remainingLetters = "";
-}
+      function reset() {
+        wins = 0;
+        randomWord = "";
+        remainingLetters = "";
+      }
