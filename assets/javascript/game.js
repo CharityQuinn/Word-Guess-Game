@@ -3,7 +3,7 @@ var wins;
 var remainingLetters;
 var wordSpell = [];
 var userGuess;
-var guessLeft = 6;
+var guessLeft = 9;
 var randomWord = "";
 
 // Create function to pick the  from list of words
@@ -89,7 +89,7 @@ function checkLetter() {
 initializeGame();
 
 $(document).ready(function(){ 
-  console.log("Did we register a keyboad click? " + this)
+  console.log("Did we register a keyboad click? " + event);
   userGuess = String.fromCharCode(event).toLowerCase();
   checkLetter();
 })
