@@ -33,6 +33,9 @@ document.getElementById("usedLetter").innerHTML = wrongLtr.join(" ");
 
 
 document.onkeyup = function (event) {
+  $(".bet").unbind().click(function() {
+    //Stuff
+ });
   console.log("I am in document.onkeyup " + event);
   // Converts all key clicks to lowercase letters.
   pickedLtr = String.fromCharCode(event.which).toLowerCase();
@@ -63,6 +66,7 @@ document.onkeyup = function (event) {
           dashes[j] = letter;
           console.log("Dashes now has a letter " + dashes);
           document.getElementById("nameSpace").innerHTML = dashes.join(" ");
+          compareWord ();
 
         }
       }
@@ -72,20 +76,34 @@ document.onkeyup = function (event) {
 
       document.getElementById("usedLetter").innerHTML = wrongLtr.join(" ");
       numGuess--;
+      if (numGuess === 0) {
+        alert("You have lost");
+        reset ();
+      }
       console.log("These are wrong letters " + wrongLtr + "Guesses now is " + numGuess);
       document.getElementById("guesses").innerHTML = numGuess;
 
-    }
+    };
 
-
-    if (dashes.toString() === randomWord.toString()) {
-      console.log("Does the whole word match?");
-      wins++;
-      alert("You win!");
-      document.getElementById("wins").innerHTML = wins;
-
-      guesses = 0;
-      guessesLeft = 7;
-    }
+  
   }
 }
+function compareWord () {
+  if (dashes.toString() === randomWord.toString()) {
+    console.log("Does the whole word match?");
+    wins++;
+    alert("You win!");
+    document.getElementById("wins").innerHTML = wins;
+
+    guesses = 0;
+    guessesLeft = 7;
+  }
+esle {
+  
+}};
+
+  function reset() {
+    wins = 0;
+    randomWord = "";
+    remainingLetters = "";
+  }
