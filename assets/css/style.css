@@ -9,48 +9,31 @@
 
 
 .container1 {
-  float: right
-  border: black;
-  padding: 50px;
-  float: left;
-  width: 33%;
-  height: 180px;
-  font-family: Georgia, Times, "Times New Roman", serif;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 90px;
-  text-align: center;
-  text-decoration: none;
+  
+  width: 40%; 
+  height: 35%;
+  
 }
-.row {
+
+ .row {
   width: 250px;
   height: 20px;
   
-} 
+}
 .container2 {
   float: right;
   border: black;
   padding: 50px;
+  margin: 10px;
   width: 550px;
   height: 180px;
-  font-family: Georgia, Times, "Times New Roman", serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 90px;
   color: black;
   text-align: center;
   text-decoration: none;
-  float: left;
+  
 }
 
-.work {
- 
-  float: left;
-  width: 150px;
-  height: 150px;
-  border: 0 none;
-  opacity: 0.8;
-}
-.picture {
-  transform: rotate(90deg);
-}
